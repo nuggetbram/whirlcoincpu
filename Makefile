@@ -130,19 +130,19 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /home/dvorakoin/GroestlCoin-cpu/missing --run aclocal-1.11
+ACLOCAL = ${SHELL} /home/liam/whirlcoincpu/missing --run aclocal-1.11
 ALLOCA = 
 AMTAR = $${TAR-tar}
-AUTOCONF = ${SHELL} /home/dvorakoin/GroestlCoin-cpu/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/dvorakoin/GroestlCoin-cpu/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/dvorakoin/GroestlCoin-cpu/missing --run automake-1.11
+AUTOCONF = ${SHELL} /home/liam/whirlcoincpu/missing --run autoconf
+AUTOHEADER = ${SHELL} /home/liam/whirlcoincpu/missing --run autoheader
+AUTOMAKE = ${SHELL} /home/liam/whirlcoincpu/missing --run automake-1.11
 AWK = mawk
 CC = gcc -std=gnu99
 CCAS = gcc -std=gnu99
 CCASDEPMODE = depmode=gcc3
-CCASFLAGS = -O3
+CCASFLAGS = -g -O2
 CCDEPMODE = depmode=gcc3
-CFLAGS = -O3
+CFLAGS = -g -O2
 CPP = gcc -std=gnu99 -E
 CPPFLAGS = 
 CRYPTO_LIBS = -lcrypto
@@ -162,13 +162,13 @@ INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 JANSSON_LIBS = compat/jansson/libjansson.a
 LDFLAGS = 
-LIBCURL = -L/usr/lib/x86_64-linux-gnu -lcurl -Wl,-Bsymbolic-functions -Wl,-z,relro
+LIBCURL = -L/usr/lib/x86_64-linux-gnu -lcurl
 LIBCURL_CPPFLAGS = 
 LIBOBJS = 
 LIBS = 
 LTLIBOBJS = 
 MAINT = #
-MAKEINFO = ${SHELL} /home/dvorakoin/GroestlCoin-cpu/missing --run makeinfo
+MAKEINFO = ${SHELL} /home/liam/whirlcoincpu/missing --run makeinfo
 MKDIR_P = /bin/mkdir -p
 OBJEXT = o
 PACKAGE = cpuminer
@@ -188,10 +188,10 @@ STRIP =
 VERSION = 2.3.2
 WS2_LIBS = 
 _libcurl_config = 
-abs_builddir = /home/dvorakoin/GroestlCoin-cpu
-abs_srcdir = /home/dvorakoin/GroestlCoin-cpu
-abs_top_builddir = /home/dvorakoin/GroestlCoin-cpu
-abs_top_srcdir = /home/dvorakoin/GroestlCoin-cpu
+abs_builddir = /home/liam/whirlcoincpu
+abs_srcdir = /home/liam/whirlcoincpu
+abs_top_builddir = /home/liam/whirlcoincpu
+abs_top_srcdir = /home/liam/whirlcoincpu
 ac_ct_CC = gcc
 am__include = include
 am__leading_dot = .
@@ -218,7 +218,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/dvorakoin/GroestlCoin-cpu/install-sh
+install_sh = ${SHELL} /home/liam/whirlcoincpu/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -254,7 +254,7 @@ minerd_SOURCES = elist.h miner.h compat.h \
 		  whirlpool.c whirlcoin.c
 
 minerd_LDFLAGS = $(PTHREAD_FLAGS)
-minerd_LDADD = -L/usr/lib/x86_64-linux-gnu -lcurl -Wl,-Bsymbolic-functions -Wl,-z,relro compat/jansson/libjansson.a -lpthread  
+minerd_LDADD = -L/usr/lib/x86_64-linux-gnu -lcurl compat/jansson/libjansson.a -lpthread  
 minerd_CPPFLAGS = 
 all: cpuminer-config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive

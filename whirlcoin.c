@@ -26,7 +26,7 @@ sph_whirlpool1_init(&ctx_whirlpool);
 	sph_whirlpool1 (&ctx_whirlpool, hashA, 64); 
     sph_whirlpool1_close(&ctx_whirlpool, hashB); 
 	
-    memcpy(state, hashB, 64);	
+    memcpy(state, hashB, 32);	
 }
 
 int scanhash_WhirlCoin(int thr_id, uint32_t *pdata, const uint32_t *ptarget,

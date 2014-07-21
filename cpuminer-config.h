@@ -78,7 +78,7 @@
 #define HAVE_UNISTD_H 1
 
 /* Defined if libcurl supports AsynchDNS */
-/* #undef LIBCURL_FEATURE_ASYNCHDNS */
+#define LIBCURL_FEATURE_ASYNCHDNS 1
 
 /* Defined if libcurl supports IDN */
 #define LIBCURL_FEATURE_IDN 1
